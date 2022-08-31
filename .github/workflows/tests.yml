@@ -4,7 +4,9 @@ on:
   pull_request:
     branches:
       - main
-
+  push:
+    branches-ignore:
+      - main # should already be handled by PR tests
 jobs:
   tests:
     runs-on: ubuntu-latest
